@@ -1,0 +1,167 @@
+<html>
+<head>
+    <title>Popup</title>
+	
+	<style type="text/css">
+		.titlebar {
+			height: 25px;
+			background: #e69317;
+			border-bottom: solid 1px 9e5609;
+			margin-bottom: 3px;
+			margin-left: 3px;
+			margin-right: 3px;
+			margin-top: 3px;
+			padding-top:8px;
+			padding-bottom:4px;
+			padding-right:8px;
+			padding-left:8px;
+			font-size: large;
+			font-family: sans-serif;
+		}
+		.popup {
+			border: solid 2px black;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            background-color: white;
+            height: 40%;
+            width: 40%;
+			padding-top:8px;
+			padding-bottom:8px;
+			padding-right:8px;
+			padding-left:8px;
+			font-family: sans-serif;
+		}
+		#popup-buttons {
+			display:inline-block;
+			margin-bottom: 15px;
+		}
+		#wrapper {
+			width: 95%;
+			position:absolute;
+			bottom:0px;
+			text-align: center;
+		}
+		input {
+			font-size: 32px; 
+		}
+	</style>
+	
+	<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="stylesheet" />	
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	    $(document).ready(function() {
+
+			//Prevent outside links from being clicked
+			var linkKiller = function(evt){
+					evt.preventDefault();
+				};
+			
+			//Add buttons to popup box (only the first two examples)	
+			var addButtons = function(label, handler) {
+				$("#popup-buttons").html(""); 
+				$("#popup-buttons").append('<input type="button" id="btn1" value="OK" />');
+				$("#popup-buttons").append('<input type="button" id="btn2" value="Cancel" />');
+				
+				$("#btn1").attr("value", label);
+				
+				$("#btn1").click(function() {
+					if (handler) {
+						handler();
+					}
+					$("#btn2").click();
+				});
+				$("#btn2").click(function() {
+					$("#the-popup").hide();
+					$("a").unbind('click',linkKiller);
+				} );
+			}
+			
+			var displayPopup = function () {
+				$("#popup-button").show();
+				$("#the-popup").attr("style","");
+				$("#the-popup").addClass("popup").show();
+				$("a").bind('click',linkKiller);
+			}
+			
+			$("#the-button").click(function() {
+				displayPopup();
+				addButtons();
+		    });		
+			
+			$("#results-button").click(function() {
+				displayPopup();
+				addButtons("Alright!", function () {
+					alert("Notice this button did something a little different than the last...");
+				});
+			})
+			
+			$("#popup-button").bind("click",function() {
+				$("#the-popup").hide();
+				$("a").unbind('click',linkKiller);
+			})
+			
+			//jQueryUI Example
+			$("#jquery-button").click(function() {
+				$("#the-popup").removeClass("popup");
+				$("#popup-buttons").html("");
+				$("#popup-button").hide();
+				$("#title").hide();
+				$("#the-popup").dialog({ 
+					title: 'jQueryUI Popup' 
+				});
+				$("#the-popup").dialog({
+				resizable: true,
+				height:240,
+				width: 400,
+				beforeClose:function() {
+					$( this ).dialog( "destroy" );
+					$("#title").show();
+				},
+				modal: true,
+				buttons: {
+					"OK": function() {
+						$( this ).dialog( "destroy" );
+						$("#title").show();
+					},
+					Cancel: function() {
+						$( this ).dialog( "destroy" );
+						$("#title").show();
+					}
+				}
+				});
+			})
+			
+		});
+	</script>
+		
+</head>
+
+<body>
+
+<button id="the-button">Default Example</button>
+<button id="results-button">Different results from OK button</button>
+<button id="jquery-button">Using jQuery Dialog</button>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="http://google.com/">aliquip ex ea commodo consequat</a>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, <a href="http://google.com/">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</a> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <a href="http://google.com/">eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa</a> qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<div id="the-popup" class="ui-corner-all" style="display: none;">
+	<div class="titlebar" id="title">
+		<font color="white"><strong>Example Popup </strong> </font>
+		<button id="popup-button" style="float:right;">X</button>
+	</div>
+	<div style="margin-left: 15px; padding-top: 15px; padding-bottom: 20px;">Hello! I am a popup :)</div>
+	<div id="wrapper"> 
+		<div id="popup-buttons"></div>
+	</div>
+</div>
+
+</body>
+</html>

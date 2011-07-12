@@ -1,0 +1,158 @@
+	html { height: 100% }
+	body { 
+		height: 100%; 
+		padding-left: 0%;
+		background: url("http://www.fractalgames.com/img/desert_background.jpg") 50% 50% no-repeat fixed;
+	} 
+
+
+
+
+	
+	#jq-books{width:200px;float:right;margin-right:0}
+	#jq-books li{line-height:1.25em;margin:1em 0 1.8em;clear:left}
+	#home-content-wrapper #jq-books a.jq-bookImg{float:left;margin-right:10px;width:55px;height:70px}
+	#jq-books h3{margin:0 0 .2em 0}
+	#home-content-wrapper #jq-books h3 a{font-size:1em;color:black;}
+	#home-content-wrapper #jq-books a.jq-buyNow{font-size:1em;color:white;display:block;background:url(http://static.jquery.com/files/rocker/images/btn_blueSheen.gif) 50% repeat-x;text-decoration:none;color:#fff;font-weight:bold;padding:.2em .8em;float:left;margin-top:.2em;}
+	
+
+div#navbar2 { -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: -moz-none;
+-o-user-select: none;
+user-select: none;
+height: 30px; width: 95%; border-top: solid #000 1px; border-bottom: solid #000 1px; background-color: #336699;}
+div#navbar2 ul { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; font-size: small; color: #FFF; line-height: 30px; white-space: nowrap;}
+div#navbar2 li { list-style-type: none; display: inline;}
+
+A:link {text-decoration: none; color:#AAAAFF;}
+A:visited {text-decoration: none; color:#9999EE;}
+A:active {text-decoration: none; color:red;}
+A:hover {text-decoration: underline; color: yellow;}
+
+.button {
+	background: #5CCFDA; 
+	cursor: pointer; 
+	border-top: 
+	solid 2px #eaeaea; 
+	border-left: solid 2px #eaeaea; 
+	border-bottom: solid 2px #777; 
+	border-right: 
+	solid 2px #777; 
+	padding: 5px 5px;
+
+}
+
+	#button {
+			-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: -moz-none;
+-o-user-select: none;
+user-select: none;
+	}
+	
+	#events-feed{
+		font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+		font-size:18px;text-align:left;
+		background:#111111;opacity:0.87;
+//		margin:8px;
+		padding:5px;
+		}
+	#events-feed th{
+		font-size:18px;font-weight:bold;
+		background:#777799;opacity:0.67;
+		padding:8px;
+		}
+	#events-feed td{
+		background:#CCCCCC;opacity:0.87;
+		padding:4px;
+		}
+	#events-feed tr.d0 td {
+		background-color: #252525; color: white;		
+		}
+
+	#events-feed tr.d1 td {
+		background-color: #111111; color: white;		
+		}
+	
+	#events-feed tr.d2 th {
+		background-color: #222222; color: white;
+	}
+
+	// No need for hover
+	/*#event-feed tr:hover td{
+		background:#d0dafd;opacity:0.87;
+		}*/
+ 
+	#incubators-feed{
+		font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+		font-size:18px;text-align:left;
+		background:#111111;opacity:0.87;
+//		margin:8px;
+		padding:5px;
+		}
+	#incubators-feed th{
+		font-size:18px;font-weight:bold;
+		background:#777799;opacity:0.67;
+		padding:8px;
+		}
+	#incubators-feed td{
+		background:#CCCCCC;opacity:0.87;
+		padding:4px;
+		}
+	#incubators-feed tr.d0 td {
+		background-color: #444444; color: white;		
+		}
+
+	#incubators-feed tr.d1 td {
+		background-color: #111111; color: white;		
+		}
+	
+	#incubators-feed tr.d2 th {
+		background-color: #222222; color: white;
+	}
+	
+  
+ 
+	td.rounded {
+		background-color:#444444;
+			opacity:0.8;
+		width:50%;
+		height:150px;/*whatever size u need for the ends*/
+		margin:5px 5px 5px 5px;
+		padding: 5px 20px 5px 20px;
+		//		position:absolute; top:40%; left: 15%;
+	} 
+	
+btn-a { background: #5CCFDA; cursor: pointer; border-top: solid 2px #eaeaea; border-left: solid 2px #eaeaea; border-bottom: solid 2px #777; border-right: solid 2px #777; padding: 5px 5px; }
+btn-a.down { background: #2AABB6; border-top: solid 2px #777; border-left: solid 2px #777; border-bottom:solid 2px  #eaeaea; border-right: solid 2px #eaeaea; }
+
+btn-b { background: #7096DC; cursor: pointer; border-top: solid 2px #eaeaea; border-left: solid 2px #eaeaea; border-bottom: solid 2px #777; border-right: solid 2px #777; padding: 5px 5px; }
+btn-b.down { background: #2B5CB5; border-top: solid 2px #777; border-left: solid 2px #777; border-bottom:solid 2px  #eaeaea; border-right: solid 2px #eaeaea; }
+
+btn-c { background: #986EDE; cursor: pointer; border-top: solid 2px #eaeaea; border-left: solid 2px #eaeaea; border-bottom: solid 2px #777; border-right: solid 2px #777; padding: 5px 5px; }
+btn-c.down { background: #6A2FCB; border-top: solid 2px #777; border-left: solid 2px #777; border-bottom:solid 2px  #eaeaea; border-right: solid 2px #eaeaea; }
+
+btn-d { background: #DF7171; cursor: pointer; border-top: solid 2px #eaeaea; border-left: solid 2px #eaeaea; border-bottom: solid 2px #777; border-right: solid 2px #777; padding: 5px 5px; }
+btn-d.down { background: #CC2E2E; border-top: solid 2px #777; border-left: solid 2px #777; border-bottom:solid 2px  #eaeaea; border-right: solid 2px #eaeaea; }
+
+btn-e { background: #32DA3E; cursor: pointer; border-top: solid 2px #eaeaea; border-left: solid 2px #eaeaea; border-bottom: solid 2px #777; border-right: solid 2px #777; padding: 5px 5px; }
+btn-e.down { background: #55B75E; border-top: solid 2px #777; border-left: solid 2px #777; border-bottom:solid 2px  #eaeaea; border-right: solid 2px #eaeaea; }
+
+btn-f { background: #32DA3E; cursor: pointer; border-top: solid 2px #eaeaea; border-left: solid 2px #eaeaea; border-bottom: solid 2px #777; border-right: solid 2px #777; padding: 5px 5px; }
+btn-f.down { background: #55B75E; border-top: solid 2px #777; border-left: solid 2px #777; border-bottom:solid 2px  #eaeaea; border-right: solid 2px #eaeaea; }
+
+btn-g { background: #32DA3E; cursor: pointer; border-top: solid 2px #eaeaea; border-left: solid 2px #eaeaea; border-bottom: solid 2px #777; border-right: solid 2px #777; padding: 5px 5px; }
+btn-g.down { background: #55B75E; border-top: solid 2px #777; border-left: solid 2px #777; border-bottom:solid 2px  #eaeaea; border-right: solid 2px #eaeaea; }
+    
+    
+btn* {
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: -moz-none;
+-o-user-select: none;
+user-select: none;
+}
+
+

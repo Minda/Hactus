@@ -207,4 +207,9 @@ We also need to geocode each of these? NOPE -- LAT LNG IS GIVEN!!! BY API!! SWEE
         mysql_close($con);
 
 
+?>/ END MySQL
+        // Notes:
+        mysql_close($con);
+
+
 ?>

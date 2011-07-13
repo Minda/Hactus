@@ -21,3 +21,6 @@
 	if (!mysql_query($query,$con))    die('Error: ' . mysql_error());	
 	mysql_close($con);
 ?>
+   die('Error: ' . mysql_error());	
+	mysql_close($con);
+?>

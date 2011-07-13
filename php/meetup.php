@@ -194,4 +194,6 @@ Note: No Geocoding is necessary for Events because meetup API provides lat lng.
 
         // Notes:
 
+?>     // Notes:
+
 ?>
